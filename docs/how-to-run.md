@@ -1,5 +1,9 @@
 # [Main](../README.md) > How To Run
 
+## Install dependencies
+
+Execute `npm i` and wait for completion.
+
 ## Development server
 
 Run `npm start` or `npm run serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
