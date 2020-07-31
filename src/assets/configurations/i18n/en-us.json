@@ -1,0 +1,10 @@
+{
+  "app": {
+    "name": "Angular Appsdasdasd",
+    "menu": {
+      "item-1": "Item 1",
+      "item-2": "Item 2",
+      "item-3": "Item 3"
+    }
+  }
+}

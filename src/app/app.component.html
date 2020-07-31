@@ -1,0 +1,37 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav"
+    fixedInViewport
+    [mode]="isMobile ? 'over' : 'side'"
+    [opened]="!isMobile">
+    <img class="nav-logo" [src]="logos.forMenu" alt="Project Logo">
+    <mat-nav-list>
+      <a mat-list-item href="#">{{'app.menu.item-1' | translate}}</a>
+      <a mat-list-item href="#">{{'app.menu.item-2' | translate}}</a>
+      <a mat-list-item href="#">{{'app.menu.item-3' | translate}}</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="app-header">
+      <div class="left-side">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isMobile">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <img class="header-logo"
+          [src]="logos.forHeader"
+          *ngIf="isMobile"
+          alt="Project Logo">
+        <span *ngIf="!isMobile">{{'app.name' | translate}}</span>
+      </div>
+
+      <div class="right-side">
+        <avatar></avatar>
+      </div>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

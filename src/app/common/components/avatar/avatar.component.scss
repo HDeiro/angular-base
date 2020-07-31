@@ -1,0 +1,20 @@
+@import '../../../../sass/references';
+@import '../../../../sass/placeholders';
+
+.avatar-wrapper {
+  $avatar-size: $toolbar-height - 21px;
+
+  @extend %df-aic-jcc;
+
+  height: $avatar-size;
+  width: $avatar-size;
+  border-radius: 100%;
+  background-color: $color-5;
+  border: 3px solid $color-5;
+  transition: border-color 300ms ease-out;
+
+  &:hover {
+    border-color: white;
+    cursor: pointer;
+  }
+}

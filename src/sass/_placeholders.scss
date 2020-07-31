@@ -1,0 +1,147 @@
+// Flexbox
+
+%df {
+  display: flex;
+}
+
+%df-aic-jcc {
+  @extend %df;
+  align-items: center;
+  justify-content: center;
+}
+
+%df-aic-jcfs {
+  @extend %df;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+%df-aic-jcfe {
+  @extend %df;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+%df-aifs-jcc {
+  @extend %df;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+%df-aic-jcsa {
+  @extend %df;
+  align-items: center;
+  justify-content: space-around;
+}
+
+%df-aic-jcsb {
+  @extend %df;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%df-aic-jcc-fdc {
+  @extend %df;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+%df-aifs-jcsb-fdc {
+  @extend %df;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+%df-aic-jcc-fdr {
+  @extend %df;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+%df-aic-jcc-fdcr {
+  @extend %df;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+
+%df-aifs-jcc-fdc {
+  @extend %df;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+%df-aife-jcsb {
+  @extend %df;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+%df-aifs-jcsb {
+  @extend %df;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+%df-aifs-jcfs-fdc {
+  @extend %df;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+%df-aic-jcfs-fdc {
+  @extend %df;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+%df-aife-jcc-fdc {
+  @extend %df;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+}
+
+%df-aifs-jcfs {
+  @extend %df;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+%df-aib-jcfs {
+  @extend %df;
+  align-items: baseline;
+  justify-content: flex-start;
+}
+
+%dif-aic-jcfs {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+// Positions
+
+%allbsolute {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+%allfixed {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

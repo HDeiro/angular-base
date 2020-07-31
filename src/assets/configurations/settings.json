@@ -1,0 +1,18 @@
+{
+  "constants": {
+    "cssOverride": {
+      "pallete-primary": "#333",
+      "pallete-accent": "#1371dd",
+      "sidenav-width": "200px"
+    },
+    "language": {
+      "default": "pt-br",
+      "supported": ["pt-br", "en-us"]
+    },
+    "logo": {
+      "forMenu": "http://placehold.it/200x140",
+      "forHeader": "http://placehold.it/100x50"
+    }
+  },
+  "featureFlags": {}
+}

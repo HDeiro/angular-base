@@ -1,0 +1,19 @@
+:root {
+  // Will be Overwritten
+  --pallete-primary: #000;
+  --pallete-accent: #000;
+  --sidenav-width: 200px;
+}
+
+// Colors (CSS Vars)
+
+$color-1: #333;
+$color-2: #fff;
+$color-3: #fefefe;
+$color-4: var(--pallete-primary);
+$color-5: var(--pallete-accent);
+
+// Sizes
+
+$sidenav-width: var(--sidenav-width);
+$toolbar-height: 64px;
