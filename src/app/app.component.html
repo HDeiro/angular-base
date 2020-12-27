@@ -1,15 +1,22 @@
 <mat-sidenav-container class="sidenav-container">
+  <!-- Sidenav navigation -->
   <mat-sidenav #drawer class="sidenav"
     fixedInViewport
     [mode]="isMobile ? 'over' : 'side'"
     [opened]="!isMobile">
     <img class="nav-logo" [src]="logos.forMenu" alt="Project Logo">
     <mat-nav-list>
-      <a mat-list-item href="#">{{'app.menu.item-1' | translate}}</a>
-      <a mat-list-item href="#">{{'app.menu.item-2' | translate}}</a>
-      <a mat-list-item href="#">{{'app.menu.item-3' | translate}}</a>
+      <a mat-list-item
+        class="navigation-item"
+        (click)="isMobile && drawer.toggle()"
+        [routerLink]="[menu.route]"
+        routerLinkActive="active"
+        *ngFor="let menu of menus">
+        {{menu.name | translate}}
+      </a>
     </mat-nav-list>
   </mat-sidenav>
+  <!-- Header -->
   <mat-sidenav-content>
     <mat-toolbar color="primary" class="app-header">
       <div class="left-side">
@@ -32,6 +39,9 @@
         <avatar></avatar>
       </div>
     </mat-toolbar>
-    <!-- Add Content Here -->
+
+    <div class="app-container">
+      <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

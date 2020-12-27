@@ -2,9 +2,8 @@
   "app": {
     "name": "Angular Dashboard Template",
     "menu": {
-      "item-1": "Item 1",
-      "item-2": "Item 2",
-      "item-3": "Item 3"
+      "item-1": "Home",
+      "item-2": "About"
     }
   }
 }

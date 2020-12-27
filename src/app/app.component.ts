@@ -1,3 +1,5 @@
+import { Menu } from './common/models/menu/menu.model';
+import { MenuService } from './common/services/menu/menu.service';
 import { PubsubService } from './common/services/pubsub/pubsub.service';
 import { Emitters } from './common/services/pubsub/pubsub-emitters';
 import { UserAgentService } from './common/services/user-agent/user-agent.service';
@@ -11,10 +13,12 @@ import { filter } from 'rxjs/operators';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [ MenuService ]
 })
 export class AppComponent implements OnInit, OnDestroy {
 
+  public menus: Menu[];
   public isMobile: boolean;
   public logos = {
     forMenu:   environment?.constants?.logo?.forMenu,
@@ -29,7 +33,8 @@ export class AppComponent implements OnInit, OnDestroy {
     private viewState: ViewStateService,
     private userAgent: UserAgentService,
     private pubsub: PubsubService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private menuService: MenuService
   ) {}
 
   ngOnInit() {
@@ -37,10 +42,19 @@ export class AppComponent implements OnInit, OnDestroy {
     this.setupUserAgentHandling();
     this.setupViewStateHandling();
     this.startGlobalListeners();
+    this.initMenus();
   }
 
   ngOnDestroy() {
     this.subscriptions.forEach(subscription => subscription.unsubscribe());
+  }
+
+  private initMenus() {
+    this.subscriptions.push(
+      this.menuService
+        .getMenus()
+        .subscribe(menus => this.menus = menus)
+    );
   }
 
   private changeLanguage(language: string) {

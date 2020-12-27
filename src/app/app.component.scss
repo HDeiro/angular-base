@@ -21,6 +21,20 @@
   .mat-toolbar {
     background: inherit;
   }
+
+  .navigation-item {
+    transition: background 300ms ease-out;
+
+    &.active {
+      background: $color-5;
+      color: $color-2;
+    }
+
+    &:hover, &:focus {
+      background: $color-5 !important;
+      color: $color-2;
+    }
+  }
 }
 
 .app-header {
