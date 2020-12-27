@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRouting } from './app.routing';
 import { AppComponent } from './app.component';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -22,7 +22,7 @@ export const maskOptions: Partial<IConfig> | (() => Partial<IConfig>) = {};
   declarations: [ AppComponent ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRouting,
     HttpClientModule,
     NgxMaskModule.forRoot(maskOptions),
     TranslateModule.forRoot({
