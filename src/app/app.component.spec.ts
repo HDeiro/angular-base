@@ -1,3 +1,4 @@
+import { MenuService } from './common/services/menu/menu.service';
 import { AvatarModule } from './common/components/avatar/avatar.module';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -41,6 +42,9 @@ describe('AppComponent', () => {
         MatSidenavModule,
         MatListModule,
         AvatarModule
+      ],
+      providers: [
+        MenuService
       ],
       declarations: [
         AppComponent

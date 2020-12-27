@@ -1,3 +1,4 @@
+import { MatIconModule } from '@angular/material/icon';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { AvatarComponent } from './avatar.component';
@@ -8,7 +9,10 @@ describe('AvatarComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ AvatarComponent ]
+      declarations: [ AvatarComponent ],
+      imports: [
+        MatIconModule
+      ]
     })
     .compileComponents();
   }));

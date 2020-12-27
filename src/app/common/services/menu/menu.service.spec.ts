@@ -6,7 +6,11 @@ describe('MenuService', () => {
   let service: MenuService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      providers: [
+        MenuService
+      ]
+    });
     service = TestBed.inject(MenuService);
   });
 
