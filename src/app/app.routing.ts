@@ -1,5 +1,4 @@
 import { FeatureFlagGuard } from './common/guards/feature-flag.guard';
-import { environment } from './../environments/environment.prod';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
