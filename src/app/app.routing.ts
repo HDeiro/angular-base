@@ -1,14 +1,24 @@
+import { FeatureFlagGuard } from './common/guards/feature-flag.guard';
+import { environment } from './../environments/environment.prod';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule),
+    canActivate: [FeatureFlagGuard],
+    data: {
+      featureFlag: 'home'
+    }
   },
   {
     path: 'about',
-    loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule)
+    loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule),
+    canActivate: [FeatureFlagGuard],
+    data: {
+      featureFlag: 'about'
+    }
   },
   {
     path: '',

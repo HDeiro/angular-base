@@ -11,5 +11,5 @@ export interface Environment {
       forHeader: string;
     }
   },
-  featureFlags?: object;
+  featureFlags?: any;
 }

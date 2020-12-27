@@ -14,5 +14,8 @@
       "forHeader": "http://placehold.it/100x50"
     }
   },
-  "featureFlags": {}
+  "featureFlags": {
+    "home": true,
+    "about": true
+  }
 }
