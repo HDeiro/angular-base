@@ -1,1 +1,12 @@
-<h1>todo-list works!</h1>
+<h1>Todo-list</h1>
+
+<div *ngFor="let element of list" class="todo-card">
+    <mat-card>
+        <mat-card-title>
+            <h3>{{element.title}}</h3>
+        </mat-card-title>
+        <mat-card-content>
+            <p>{{element.content}}</p>
+        </mat-card-content>
+    </mat-card>
+</div>
