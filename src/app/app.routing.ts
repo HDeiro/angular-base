@@ -20,6 +20,14 @@ const routes: Routes = [
     }
   },
   {
+    path: 'todo-list',
+    loadChildren: () => import('./pages/todo-list/todo-list.module').then(m => m.TodoListModule),
+    canActivate: [FeatureFlagGuard],
+    data: {
+      featureFlag: 'todo-list'
+    }
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'

@@ -16,6 +16,7 @@
   },
   "featureFlags": {
     "home": true,
-    "about": true
+    "about": true,
+    "todo-list": true
   }
 }

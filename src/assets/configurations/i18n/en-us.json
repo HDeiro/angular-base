@@ -3,7 +3,8 @@
     "name": "Angular Dashboard Template",
     "menu": {
       "item-1": "Home",
-      "item-2": "About"
+      "item-2": "About",
+      "item-3": "TODO List"
     }
   }
 }
