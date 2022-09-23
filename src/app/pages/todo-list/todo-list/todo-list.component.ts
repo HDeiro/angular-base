@@ -24,7 +24,6 @@ export class TodoListComponent implements OnInit {
   listAllItems(): void {
     this.todolistservice.getItems().subscribe(res => res.forEach(element => {
       this.list.push(element);
-      console.log(element) //TODO set background color dinamicaly
     }));
   }
 
