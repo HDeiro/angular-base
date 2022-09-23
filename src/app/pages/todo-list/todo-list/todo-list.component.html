@@ -1,4 +1,3 @@
-
 <div class="add-button-container">
     <button mat-fab aria-label="New" class="add-button" (click)="createNewItem()">
         <mat-icon>add</mat-icon>
@@ -7,7 +6,7 @@
 
 <div class="content-container">
     <div *ngFor="let element of list">
-        <mat-card>
+        <mat-card [style.background-color]="element.color">
             <div class="card-header">
                 <mat-card-title class="card-title">
                     <h3>{{element.title}}</h3>
@@ -16,7 +15,7 @@
                     <button mat-mini-fab aria-label="Delete" color="warn" class="action-button" (click)="deleteItem(element.id)">
                         <mat-icon>delete</mat-icon>
                     </button>
-                    <button mat-mini-fab aria-label="Edit" class="action-button" (click)="editItem(element.id)">
+                    <button mat-mini-fab aria-label="Edit" class="action-button" (click)="editItem(element)">
                         <mat-icon>edit</mat-icon>
                     </button>
                 </mat-card-title>

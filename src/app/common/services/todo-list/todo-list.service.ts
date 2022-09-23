@@ -28,6 +28,6 @@ export class TodoListService {
   }
 
   editItem(item: any, id: number): Observable<any> {
-    return this._httpClient.post(this._url + id, item);
+    return this._httpClient.put(this._url + id, item);
   }
 }

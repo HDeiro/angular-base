@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { TodoListService } from 'src/app/common/services/todo-list/todo-list.service';
+import { TodoFormComponent } from '../todo-form/todo-form.component';
 
 @Component({
   selector: 'app-todo-list',
@@ -12,6 +14,7 @@ export class TodoListComponent implements OnInit {
 
   constructor(
     public todolistservice: TodoListService,
+    public dialog: MatDialog,
   ) { }
 
   ngOnInit(): void {
@@ -21,11 +24,18 @@ export class TodoListComponent implements OnInit {
   listAllItems(): void {
     this.todolistservice.getItems().subscribe(res => res.forEach(element => {
       this.list.push(element);
+      console.log(element) //TODO set background color dinamicaly
     }));
   }
 
   createNewItem(): void {
-    console.log("open");
+    this.dialog.open(TodoFormComponent)
+    .afterClosed().subscribe(res=> {
+      if(res == true) {
+        this.list = [];
+        this.listAllItems();
+      }
+    });
   }
 
   deleteItem(id: number): void {
@@ -35,8 +45,15 @@ export class TodoListComponent implements OnInit {
     });
   }
 
-  editItem(id: number): void {
-    console.log(id);
+  editItem(element: any): void {
+    this.dialog.open(TodoFormComponent, { data: { element: element }})
+    .afterClosed().subscribe(res=> {
+      if(res == true) {
+        this.list = [];
+        this.listAllItems();
+      }
+    });
+    
   }
 
   refreshList(id: number): void {
