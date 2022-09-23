@@ -1,6 +1,6 @@
 
 <div class="add-button-container">
-    <button mat-fab aria-label="New" class="add-button">
+    <button mat-fab aria-label="New" class="add-button" (click)="createNewItem()">
         <mat-icon>add</mat-icon>
     </button>
 </div>
@@ -13,10 +13,10 @@
                     <h3>{{element.title}}</h3>
                 </mat-card-title>
                 <mat-card-title class="buttons">
-                    <button mat-mini-fab aria-label="Delete" color="warn" class="action-button">
+                    <button mat-mini-fab aria-label="Delete" color="warn" class="action-button" (click)="deleteItem(element.id)">
                         <mat-icon>delete</mat-icon>
                     </button>
-                    <button mat-mini-fab aria-label="Edit" class="action-button">
+                    <button mat-mini-fab aria-label="Edit" class="action-button" (click)="editItem(element.id)">
                         <mat-icon>edit</mat-icon>
                     </button>
                 </mat-card-title>

@@ -24,4 +24,26 @@ export class TodoListComponent implements OnInit {
     }));
   }
 
+  createNewItem(): void {
+    console.log("open");
+  }
+
+  deleteItem(id: number): void {
+    this.todolistservice.deleteItem(id).subscribe(res => {
+      console.log("Deleted successfully!");
+      this.refreshList(id);
+    });
+  }
+
+  editItem(id: number): void {
+    console.log(id);
+  }
+
+  refreshList(id: number): void {
+    let obj = this.list.filter(obj => {
+      return obj.id != id;
+    })
+    this.list = obj;
+  }
+
 }
