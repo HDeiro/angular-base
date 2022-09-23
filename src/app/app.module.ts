@@ -16,11 +16,10 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { TodoListComponent } from './pages/todo-list/todo-list.component';
 
 export const maskOptions: Partial<IConfig> | (() => Partial<IConfig>) = {};
 @NgModule({
-  declarations: [ AppComponent, TodoListComponent ],
+  declarations: [ AppComponent ],
   imports: [
     BrowserModule,
     AppRouting,

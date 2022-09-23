@@ -1,0 +1,11 @@
+.container {
+    margin: 16px;
+}
+::ng-deep mat-card-content {
+    display: inline;
+    .buttons {
+        width: auto;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
