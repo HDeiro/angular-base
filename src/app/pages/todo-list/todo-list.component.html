@@ -1,23 +1,27 @@
 
-<div class="container">
-    <h1>Todo-list</h1>
+<div class="add-button-container">
+    <button mat-fab aria-label="New" class="add-button">
+        <mat-icon>add</mat-icon>
+    </button>
+</div>
 
-    <div *ngFor="let element of list" class="todo-card">
+<div class="content-container">
+    <div *ngFor="let element of list">
         <mat-card>
-            <mat-card-title>
-                <h3>{{element.title}}</h3>
-            </mat-card-title>
-            <mat-card-content>
-                {{element.content}}
-                <div class="buttons">
-                    <button mat-mini-fab aria-label="Delete" >
+            <div class="card-header">
+                <mat-card-title class="card-title">
+                    <h3>{{element.title}}</h3>
+                </mat-card-title>
+                <mat-card-title class="buttons">
+                    <button mat-mini-fab aria-label="Delete" color="warn" class="action-button">
                         <mat-icon>delete</mat-icon>
                     </button>
-                    <button mat-mini-fab aria-label="Edit">
+                    <button mat-mini-fab aria-label="Edit" class="action-button">
                         <mat-icon>edit</mat-icon>
                     </button>
-                </div>
-            </mat-card-content>
+                </mat-card-title>
+            </div>
+            <mat-card-content>{{element.content}}</mat-card-content>
         </mat-card>
         <br>
     </div>

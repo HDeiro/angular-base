@@ -1,11 +1,30 @@
-.container {
-    margin: 16px;
-}
-::ng-deep mat-card-content {
-    display: inline;
-    .buttons {
-        width: auto;
-        display: flex;
-        justify-content: flex-end;
+.add-button-container {
+    margin: 8px;
+    display: flex;
+    justify-content: end;
+    .add-button {
+        mat-icon {
+            transform: scale(2);
+        }
     }
+}
+.content-container {
+    margin: 0 16px;
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+}
+:ng-deep mat-card-title {
+    margin: 0 !important;
+}
+h3 {
+    margin: 0 !important;
+    padding: 8px;
+}
+.buttons {
+    margin: 0 !important;
+}
+.action-button {
+    margin: 4px;
 }
