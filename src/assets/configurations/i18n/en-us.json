@@ -13,13 +13,18 @@
       "todo-list-form": "Task"
     },
     "fields": {
+      "filter": "Filter",
       "title": "Title",
       "content": "Content",
-      "color": "Color"
+      "color": "Color",
+      "createdAt": "Created At",
+      "action": "Action"
     },
     "action-buttons": {
       "cancel": "Cancel",
       "save": "Save"
-    }
+    },
+    "date-format": "MM/dd/yyyy HH:mm",
+    "no-data": "No data matching the filter"
   }
 }

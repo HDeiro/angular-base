@@ -13,13 +13,18 @@
       "todo-list-form": "Tarefa"
     },
     "fields": {
+      "filter": "Filtro",
       "title": "Título",
       "content": "Descrição",
-      "color": "Cor"
+      "color": "Cor",
+      "createdAt": "Criado em",
+      "action": "Ação"
     },
     "action-buttons": {
       "cancel": "Cancelar",
       "save": "Salvar"
-    }
+    },
+    "date-format": "dd/MM/yyyy HH:mm",
+    "no-data": "Nenhum dado corresponde ao filtro"
   }
 }

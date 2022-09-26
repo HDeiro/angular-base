@@ -1,7 +1,7 @@
-.add-button-container {
+.header-container {
     margin: 16px 0;
     display: flex;
-    justify-content: end;
+    justify-content: space-evenly;
     .add-button {
         mat-icon {
             transform: scale(2);
