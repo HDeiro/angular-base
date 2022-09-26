@@ -1,10 +1,25 @@
 {
   "app": {
-    "name": "Angular Dashboard Template",
+    "name": "My TODO List",
     "menu": {
       "item-1": "Home",
       "item-2": "About",
       "item-3": "TODO List"
+    },
+    "header": {
+      "about-page": "",
+      "todo-list-form-new": "New",
+      "todo-list-form-edit": "Edit",
+      "todo-list-form": "Task"
+    },
+    "fields": {
+      "title": "Title",
+      "content": "Content",
+      "color": "Color"
+    },
+    "action-buttons": {
+      "cancel": "Cancel",
+      "save": "Save"
     }
   }
 }

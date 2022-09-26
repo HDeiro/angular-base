@@ -28,7 +28,9 @@ export class TodoListComponent implements OnInit {
   }
 
   createNewItem(): void {
-    this.dialog.open(TodoFormComponent)
+    this.dialog.open(TodoFormComponent, {
+      width: '600px'
+    })
     .afterClosed().subscribe(res=> {
       if(res == true) {
         this.list = [];
@@ -45,7 +47,10 @@ export class TodoListComponent implements OnInit {
   }
 
   editItem(element: any): void {
-    this.dialog.open(TodoFormComponent, { data: { element: element }})
+    this.dialog.open(TodoFormComponent, {
+      data: { element: element },
+      width: '600px'
+    })
     .afterClosed().subscribe(res=> {
       if(res == true) {
         this.list = [];

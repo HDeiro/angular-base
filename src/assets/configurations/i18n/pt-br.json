@@ -1,10 +1,25 @@
 {
   "app": {
-    "name": "Angular App",
+    "name": "Minha Lista de Tarefas",
     "menu": {
       "item-1": "Home",
       "item-2": "Sobre",
       "item-3": "Tarefas"
+    },
+    "header": {
+      "about-page": "",
+      "todo-list-form-new": "Nova",
+      "todo-list-form-edit": "Editar",
+      "todo-list-form": "Tarefa"
+    },
+    "fields": {
+      "title": "Título",
+      "content": "Descrição",
+      "color": "Cor"
+    },
+    "action-buttons": {
+      "cancel": "Cancelar",
+      "save": "Salvar"
     }
   }
 }

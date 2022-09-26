@@ -7,8 +7,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TodoListComponent } from './todo-list/todo-list.component';
-import { TodoFormComponent } from './todo-form/todo-form.component';
 import { MatInputModule } from '@angular/material/input';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TodoFormComponent } from './todo-form/todo-form.component';
 
 @NgModule({
   declarations: [TodoListComponent, TodoFormComponent],
@@ -20,7 +23,18 @@ import { MatInputModule } from '@angular/material/input';
     MatIconModule,
     MatDialogModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient]
+      }
+    })
   ],
 })
 export class TodoListModule { }
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/configurations/i18n/', '.json');
+}
