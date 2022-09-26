@@ -15,6 +15,7 @@ export class TodoFormComponent implements OnInit {
   form: FormGroup;
   edit: boolean = false;
   action: string = "app.header.todo-list-form-new";
+  disabled: boolean = false;
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -54,6 +55,7 @@ export class TodoFormComponent implements OnInit {
   }
 
   submit(): void {
+    this.disabled = true;
     if(this.id) {
       this.form.value.id = this.id;
       this.todolistservice.editItem(this.form.value, this.id).subscribe(res => {
